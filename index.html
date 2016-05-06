@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OH GOD NO!</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <button id="nope">This is not the button you're looking for</button>
+
+    <button>button</button>
+    <figure>
+      <img id="no" src="http://memeshappen.com/media/created/Oh-god-no-Ewww-meme-31232.jpg">
+      <figcaption>Fig. 1 - The wild lurker finds something appalling.</figcaption>
+    </figure>
+  </body>
+  <script>
+
+  $(function(){
+  $("button").on({
+      mouseover:function(){
+          $(this).css({
+              left:(Math.random()*200)+"px",
+              top:(Math.random()*200)+"px",
+          });
+      }
+  });
+});
+
+  /*  $(function(){
+      $("button").on({mouseover:function(){
+          $(this).css({
+              left:(Math.random()*200) + "px",
+              top:(Math.random()*200) + "px",
+          });
+        }
+      });
+    });*/
+    //var btn = document.createElement("BUTTON");        // Create a <button> element
+    //btn.appendChild(no);                               // Append the image to <button>
+    //document.body.appendChild(btn);                    // Append <button> to <body>
+  </script>
+</html>
