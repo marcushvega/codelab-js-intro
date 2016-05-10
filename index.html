@@ -7,66 +7,67 @@
   <body>
     <!--<button onmouseover="moveIt(this)">button</button>-->
     <figure>
-      <img src="http://memeshappen.com/media/created/Oh-god-no-Ewww-meme-31232.jpg">
+      <img src="http://memeshappen.com/media/created/Oh-god-no-Ewww-meme-31232.jpg" alt="oh-god-no">
       <figcaption>Fig. 1 - The wild lurker finds something appalling.</figcaption>
-      <button id="nope">This is not the button you're looking for.</button>
     </figure>
+    <button id="nope">This is not the button you're looking for.</button>
     <a id="anchor" href="http://www.javascript-coder.com/button/javascript-button-p1.phtml">
       Button notes
     </a>
-  <button id="trueButton">The button</button>
-
-  </body>
-  <!-- The script below allows me to use a jquery library-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" charset="utf-8"></script>
-  <script>
+    <button id="trueButton">The button</button>
 
 
-/*
-    This was supposed to put an image on a button, but button was much smaller
-    than image, at least its width was.
+    <!-- The script below allows me to use a jquery library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" charset="utf-8"></script>
+    <script>
 
-    var imgObj = document.images["nope"];
-    var btn = document.createElement("button");        // Create a <button> element
-    btn.appendChild(nope);                               // Append the image to <button>
-    document.body.appendChild(btn);
-*/
 
-// The below function causes the button to move randomly about the page while
-//  (hopefully) taking care not to go outside the width of the screen.
-    var count = 1
-    var trueButtonT = document.getElementById("trueButton")
-    trueButtonT.style.display = "none"
-    $(function(){
-      $("#nope").on({mouseover:function(){
-          $(this).css({
-              left:(Math.random()*(window.outerWidth - 200) + "px"),
-              top:(Math.random()*(window.outerHeight - 200) + "px")
-          });
-          count++ // semicolon broke my button
-          if (count === 5)
-          {
-            trueButtonT.style.display = "block"
+  /*
+      This was supposed to put an image on a button, but button was much smaller
+      than image, at least its width was.
+
+      var imgObj = document.images["nope"];
+      var btn = document.createElement("button");        // Create a <button> element
+      btn.appendChild(nope);                               // Append the image to <button>
+      document.body.appendChild(btn);
+  */
+
+  // The below function causes the button to move randomly about the page while
+  //  (hopefully) taking care not to go outside the width of the screen.
+      var count = 1
+      var trueButtonT = document.getElementById("trueButton")
+      trueButtonT.style.display = "none"
+      $(function(){
+        $("#nope").on({mouseover:function(){
+            $(this).css({
+                left:(Math.random()*(window.outerWidth - 200) + "px"),
+                top:(Math.random()*(window.outerHeight - 200) + "px")
+            });
+            count++ // semicolon broke my button
+            if (count === 5)
+            {
+              trueButtonT.style.display = "block"
+            }
           }
-        }
+        })
+
       })
-
-    })
-    trueButtonT.onclick = function(){
-      alert('Why did the chicken cross the road?')
-      alert('To get to the other side')
-    }
-
-
-    //Attempted to display button after five mouseovers of fake button.
-  /*  var count = 0
-    document.getElementById('#nope').onmouseover = function () {
-      if (count === 5)
-      {
-        trueButton.display: none;
+      trueButtonT.onclick = function(){
+        alert('Why did the chicken cross the road?')
+        alert('To get to the other side')
       }
-      count++
-    } */
 
-  </script>
+
+      //Attempted to display button after five mouseovers of fake button.
+    /*  var count = 0
+      document.getElementById('#nope').onmouseover = function () {
+        if (count === 5)
+        {
+          trueButton.display: none;
+        }
+        count++
+      } */
+
+    </script>
+  </body>
 </html>
